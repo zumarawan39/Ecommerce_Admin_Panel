@@ -1,0 +1,103 @@
+<div class="container">
+    <form [formGroup]="signupForm">
+        <div class="row"> 
+            <!-- Product Information -->
+            <div class="col-md-8 ">
+                <h2 class="mb-4">Add a new Product</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Information</h5>
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Name</label>
+                            <input type="text" formControlName="name" class="form-control" id="productName" placeholder="Product Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description (Optional)</label>
+                            <textarea formControlName="description" class="form-control" id="description" rows="3"
+                                placeholder="Product Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Image -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Image</h5>
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Drag and drop your image here</label>
+                            <input class="form-control" (change)="fileChange($event)" type="file" id="productImage">
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing and Organization -->
+            <div class="col-md-4">
+                <div class="mb-1 d-flex justify-content-end">
+        
+                    <button (click)="upload()" type="submit" class="btn btn-primary">Publish Product</button>
+                  </div>
+                <div class="card mb-4 mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Pricing</h5>
+                        <div class="mb-3">
+                            <label for="bestPrice" class="form-label">Best Price</label>
+                            <input type="number" formControlName="bestprice" class="form-control" id="bestPrice" placeholder="Best Price">
+                        </div>
+                        <div class="mb-3">
+                            <label for="discountedPrice" class="form-label">Discounted Price</label>
+                            <input type="number" formControlName="discount" class="form-control" id="discountedPrice" placeholder="Discounted Price">
+                        </div>
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="taxCheck">
+                            <label class="form-check-label" for="taxCheck">
+                                Charge tax on this product
+                            </label>
+                        </div> -->
+                        <!-- <div class="form-check form-switch mt-3">
+                            <input class="form-check-input" type="checkbox" id="inStock" checked>
+                            <label class="form-check-label" for="inStock">In stock</label>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Organize</h5>
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Select Category</label>
+                            <select class="form-select" id="category" formControlName="category">
+                                <option>select</option>
+                                <option>Clothing</option>
+                                <option>Electronics</option>
+                                <option>Shoes</option>
+                                <option>Watches</option>
+                                <option>Jewellery</option>
+                                <option>Health and Beauty</option>
+                                <option>Kids and Babies</option>
+                                <option>Sports</option>
+                                <option>Home and Garden</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Select Status</label>
+                            <select class="form-select" id="status" formControlName="status">
+                                <option>select</option>
+                                <option>Inactive</option>
+
+                                <option>Publish</option>
+                                <option>Schedule</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <!-- <div class="mt-4 d-flex justify-content-end">
+
+            <button type="submit" class="btn btn-primary">Publish Product</button>
+        </div> -->
+    </form>
+</div>

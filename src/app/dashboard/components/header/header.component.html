@@ -1,0 +1,46 @@
+   <header class="header">
+    <div class="container">
+      <div class="header-left">
+        <button id="menu-toggle" class="main-btn">
+          <i class="lni lni-chevron-left"></i> Menu
+        </button>
+        <div class="header-search">
+          <form action="#">
+            <input type="text" placeholder="Search..." />
+            <button><i class="lni lni-search-alt"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="header-right">
+       <button class="icon-btn">
+  <img src="assets/icons/icons8-notification-150.png" alt="Notification Icon"/>
+  <span class="notification-badge"></span>
+</button>
+<button class="icon-btn">
+  <img src="assets/icons/icons8-message-100.png" alt="Message Icon"/>
+</button>
+
+        <div class="profile-box">
+          <button class="profile-btn">
+            <div class="profile-info">
+              <div class="image">
+                <img src="assets/images/M.ZumarAwan.png" alt="Profile Image" />
+              </div>
+              <div>
+                <h6>Adam Joe</h6>
+                <p>Admin</p>
+              </div>
+            </div>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#0">View Profile</a></li>
+            <li><a href="#0">Notifications</a></li>
+            <li><a href="#0">Messages</a></li>
+            <li><a href="#0">Settings</a></li>
+            <li><a (click)="logOut()">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  

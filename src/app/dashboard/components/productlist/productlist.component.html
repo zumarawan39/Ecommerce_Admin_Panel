@@ -1,0 +1,27 @@
+<div class="products">
+    <div class="product-list">
+        <div class="product">
+            <h2>Product List</h2>
+        <div >
+          <div *ngFor="let product of products" class="inner">
+            <div>
+              <strong>Name:</strong> {{ product.name }}
+            </div>
+            <div>
+              <strong>Description:</strong> {{ product.description }}
+            </div>
+            <div>
+              <strong>Discount Price:</strong> {{ product.discountprize }}
+            </div>
+            <div>
+              <strong>Status:</strong> {{ product.status }}
+            </div>
+            <div>
+              <img *ngIf="product.imagePath" [src]="product.imagePath" alt="Product Image" />
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+</div>

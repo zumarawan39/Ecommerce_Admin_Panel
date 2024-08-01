@@ -1,0 +1,32 @@
+.product-list {
+    padding: 20px;
+}
+.products{
+    display: flex;
+    /* width: 100vh; */
+}  
+.product{
+    width: 100%;
+}
+  .product-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-list li {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .product-list img {
+    max-width: 100px;
+    height: auto;
+  }
+  .inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
